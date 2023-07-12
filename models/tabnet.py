@@ -45,7 +45,7 @@ class TabNet(BaseModelTorch):
         return history['loss'], history["eval_" + self.metric[0]]
 
     def predict_helper(self, X):
-        X = np.array(X, dtype=np.float)
+        X = np.array(X, dtype=float)
 
         if self.args.objective == "regression":
             return self.model.predict(X)
@@ -82,6 +82,6 @@ class TabNet(BaseModelTorch):
             Only strategy are supported: default ("") 
             Return attribution in the same shape as X.
         """
-        X = np.array(X, dtype=np.float)
+        X = np.array(X, dtype=float)
         attributions = self.model.explain(torch.tensor(X, dtype=torch.float32))[0]
         return attributions

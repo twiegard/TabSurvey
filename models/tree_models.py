@@ -88,6 +88,7 @@ class CatBoost(BaseModel):
         self.params["od_wait"] = self.args.early_stopping_rounds
         self.params["verbose"] = self.args.logging_period
         self.params["train_dir"] = "output/CatBoost/" + self.args.dataset + "/catboost_info"
+        self.params["allow_writing_files"] = False
 
         if args.use_gpu:
             self.params["task_type"] = "GPU"
