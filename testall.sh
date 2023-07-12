@@ -28,11 +28,11 @@ MODELS=( ["LinearModel"]=$SKLEARN_ENV
          ["TabTransformer"]=$TORCH_ENV
          ["ModelTree"]=$GBDT_ENV
          ["NODE"]=$TORCH_ENV
-#         ["DeepGBM"]=$TORCH_ENV #TypeError: ufunc 'isnan' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
-#         ["RLN"]=$KERAS_ENV #Fehler
-#         ["DNFNet"]=$KERAS_ENV #AttributeError: module 'tensorflow' has no attribute 'placeholder'
-#         ["STG"]=$TORCH_ENV  #Fehler: AttributeError: module 'collections' has no attribute 'Sequence'
-#         ["NAM"]=$TORCH_ENV #Fehler
+         ["DeepGBM"]=$TORCH_ENV
+         ["RLN"]=$KERAS_ENV
+         ["DNFNet"]=$KERAS_ENV
+         ["STG"]=$TORCH_ENV
+         ["NAM"]=$TORCH_ENV
          ["DeepFM"]=$TORCH_ENV
          ["SAINT"]=$TORCH_ENV
          ["DANet"]=$TORCH_ENV
