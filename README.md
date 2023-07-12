@@ -68,7 +68,7 @@ Now you can navigate to the right directory with `cd opt/notebooks/`.
 
 To run a single model on a single dataset call:
 
-``python train.py --config/<config-file of the dataset>.yml --model_name <Name of the Model>``
+``python train.py --config config/<config-file of the dataset>.yml --model_name <Name of the Model>``
 
 All parameters set in the config file, can be overwritten by command line arguments, for example:
 
