@@ -30,8 +30,8 @@ conda run -n "$gbdt_env" python -m pip install https://github.com/schufa-innovat
 
 
 # Set up Pytorch environment
-conda config --set channel_priority disabled
-conda create -n "$torch_env" -y -c conda-forge -c pytorch ipykernel optuna configargparse scikit-learn pandas matplotlib shap pytorch cudatoolkit captum pytorch-tabnet requests lightgbm einops tabulate yacs pytorch-lightning wandb loguru ray-all numpy lifelines scipy h5py tensorboard
+conda config --set channel_priority flexible
+conda create -n "$torch_env" -y -c pytorch -c conda-forge python=3.10 ipykernel optuna configargparse scikit-learn pandas matplotlib shap pytorch cudatoolkit captum pytorch-tabnet requests lightgbm einops tabulate yacs pytorch-lightning wandb loguru ray-all numpy lifelines scipy h5py tensorboard
 conda config --set channel_priority strict
 #----------
 #conda run -n "$torch_env" python -m ipykernel install --user --name="$torch_env"
@@ -62,6 +62,8 @@ conda run -n "$torch_env" python -m pip install qhoptim stg https://github.com/A
 
 
 # Set up Keras environment
-conda create -n "$tensorflow_env" -y -c conda-forge tensorflow-gpu keras ipykernel optuna configargparse scikit-learn pandas
+conda config --set channel_priority flexible
+conda create -n "$tensorflow_env" -y -c anaconda -c conda-forge tensorflow=1.15.0 keras ipykernel optuna configargparse scikit-learn pandas
+conda config --set channel_priority strict
 #conda install -n "$tensorflow_env" -y -c anaconda ipykernel
 #conda install -n "$tensorflow_env" -y -c conda-forge optuna configargparse scikit-learn pandas
